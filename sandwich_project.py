@@ -38,7 +38,8 @@ while want_new_other:
     has_prepared_all_sandwich = False
     while not has_prepared_all_sandwich:
         type_bread = inputMenu(['wheat', 'white', 'sourbread'],
-                               prompt='choose one please')
+                               prompt='choose one please: \n')
         quantity_sandwich -= 1
         if quantity_sandwich == 0:
             has_prepared_all_sandwich = True
+
