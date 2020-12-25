@@ -37,9 +37,14 @@ while want_new_other:
 
     has_prepared_all_sandwich = False
     while not has_prepared_all_sandwich:
-        type_bread = inputMenu(['wheat', 'white', 'sourbread'],
+        type_bread = inputMenu(['wheat ---> ${price}'
+                                .format(price=items['bread']['wheat']),
+                                'white ---> ${price}'
+                                .format(price=items['bread']['white']),
+                                'sourbread ---> ${price} \n select: '
+                                .format(price=items['bread']['sourbread'])],
                                prompt='choose one please: \n')
+
         quantity_sandwich -= 1
         if quantity_sandwich == 0:
             has_prepared_all_sandwich = True
-
